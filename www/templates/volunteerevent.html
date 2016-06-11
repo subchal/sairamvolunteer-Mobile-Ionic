@@ -1,0 +1,24 @@
+<ion-view view-title="Events">
+   <div class="tabs-striped tabs-color-royal">
+    <ul class="tabs">
+        <li ng-class="{active:isSelected(1)}" class="tab-item">
+            <a ng-click="select(1)">Events</a></li>
+
+    </ul>
+  </div>
+  <ion-content>
+    <ion-list>
+
+      <ion-item ng-repeat="volunteerevent in volunteerevents" href="#/app/volunteerevent/{{volunteerevent.id}}" class="item-thumbnail-left">
+        <img ng-src="{{baseURL+volunteerevent.image}}">
+          <h2>{{volunteerevent.name}}</h2>
+        <p>{{volunteerevent.description}}</p>
+     <p><h4>When: {{volunteerevent.when}}</h4></p>
+        <p><h4>Where: {{volunteerevent.where}}</h4></p>
+        <ion-option-button class="button-assertive icon ion-plus-circled"
+            ng-click="addToFavorites(volunteerevent.id,volunteerevent.name)">
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

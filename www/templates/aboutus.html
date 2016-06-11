@@ -1,0 +1,25 @@
+<ion-view view-title="About Us">
+  <ion-content>
+        <div class="card">
+            <div class="item item-divider">
+                <h2>Our History</h2>
+            </div>
+            <div class="item item-text-wrap">
+                <p><em>Volunteers R Us</em> is about people. We are a community that believes in the power of volunteering to enrich our lives and the world around us. We believe that in order to be strong, a community must be constantly evolving, increasingly active and evermore diverse. We are proud to be supporting a community interested in volunteering.</p>
+                <p>We are about relationships. We are a service that brings good people and good causes together. We believe that the health of our community can be measured by the relationships formed between volunteers and the nonprofits they serve. Our aim is to build services that overcome the barriers that keep volunteers and nonprofits from finding each other, working together, and developing strong relationships.</p>
+                <p>We are about cooperation. We are a network that is only as strong as the partnerships that support it. None of us can build a community alone. We take partnerships seriously and seek to work with nonprofit, business and governmental leaders committed to building stronger relationships with their constituents around volunteering and service.</p>
+            </div>
+      </div>
+      <ul class="list list-inset">
+        <li class="item item-divider">
+            <h2>Corporate Leadership</h2>
+        </li>
+        <li class="item item-avatar item-text-wrap" ng-repeat="leader in leaders">
+            <img ng-src="{{baseURL + leader.image}}" alt="Peter Pan">
+            <h3>{{leader.name}}<h3>
+            <h4>{{leader.designation}}</h4>
+            <p>{{leader.description}}</p>
+        </li>
+    </ul>
+  </ion-content>
+</ion-view>

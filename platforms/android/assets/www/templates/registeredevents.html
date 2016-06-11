@@ -1,0 +1,23 @@
+<ion-view view-title="My Registered Events">
+    <ion-nav-buttons side="secondary">
+      <div class="buttons">
+        <button class="button button-icon icon ion-ios-minus-outline"
+          ng-click="toggleDelete()"></button>
+      </div>
+    </ion-nav-buttons>
+  <ion-content>
+    <ion-list show-delete="shouldShowDelete">
+      <ion-item ng-repeat="registeredvolunteerevent in registeredvolunteerevents" href="#/app/volunteerevent/{{registeredvolunteerevent.volunteerevents.id}}" class="item-thumbnail-left" on-swipe-left="deleteRegisteredEvent(volunteerevents.id)">
+        <img ng-src="{{baseURL+registeredvolunteerevent.volunteerevents.image}}">
+          <h2>{{registeredvolunteerevent.volunteerevents.name}} </h2>
+
+        <p>{{registeredvolunteerevent.volunteerevents.description}}</p>
+        <p><h4>When: {{registeredvolunteerevent.volunteerevents.when}}</h4></p>
+        <p><h4>Where: {{registeredvolunteerevent.where}}</h4></p>
+        <ion-delete-button class="ion-minus-circled"
+          ng-click="deleteRegisteredEvent(registeredvolunteerevent.id)">
+        </ion-delete-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
